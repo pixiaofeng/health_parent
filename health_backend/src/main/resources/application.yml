@@ -1,0 +1,17 @@
+dubbo:
+  application:
+    name: dubbo_backend
+  registry:
+    address: zookeeper://192.168.10.12:2181
+  protocol:
+    name: dubbo
+    port: 20880
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher  #Spring Boot 2.6.x处理映射匹配的策略改为AntPathMatcher
+
+server:
+  servlet:
+    context-path: /health
